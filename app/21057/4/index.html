@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <title>TicketyTackety</title>
+    
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <h1><span class="tickety">Tickety</span><span class="tackety">Tackety</span></h1>
+    
+    <div id="gameboard">
+      <div id="row1" class="rw tr">
+        <div id="cell1" class="cll lt o">O</div>
+        <div id="cell2" class="cll ct o">O</div>
+        <div id="cell3" class="cll rt"></div>
+      </div>
+      <div id="row2" class="rw mr">
+        <div id="cell4" class="cll lm"></div>
+        <div id="cell5" class="cll cm x">X</div>
+        <div id="cell6" class="cll rm"></div>
+      </div>
+      <div id="row3" class="rw br">
+        <div id="cell7" class="cll lb"></div>
+        <div id="cell8" class="cll cb"></div>
+        <div id="cell9" class="cll rb x">X</div>
+      </div>
+    </div>
+    
+    <div id="play-msg">
+      Your turn! Choose your next square.
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      $('.cll').on('click', function() {
+        $('#cell3').html("X");
+        $('#cell3').addClass("x");
+        window.location.href = '/21057/5';
+      });
+    </script>
+  </body>
+</html>
